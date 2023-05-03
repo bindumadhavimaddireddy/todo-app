@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="container">
       <header className="App-header">
-        <h1> TODO List</h1>
+        <h1> Todo List</h1>
         <TodoInput addItem={addItem}/>
         <TodoList todos={tasks} onUpdate={updateItem} onDelete={deleteItem} />
       </header>
