@@ -17,10 +17,11 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  files:
-    - '**/*'
-  base-directory: client/build
+      - aws s3 cp --recursive ./client/build s3://my-new-notes-app/
+# artifacts:
+#   files:
+#     - '**/*'
+#   base-directory: client/build
 cache:
   paths:
     - 'client/node_modules/**/*'
